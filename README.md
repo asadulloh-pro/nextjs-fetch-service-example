@@ -1,0 +1,1 @@
+# nextjs-fetch-service-example
