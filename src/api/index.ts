@@ -7,7 +7,7 @@ export type HttpMethod =
   | 'HEAD'
   | 'OPTIONS';
 
-export interface RequestConfig {
+export type RequestConfig = {
   method?: HttpMethod;
   headers?: Record<string, string>;
   body?: unknown;
@@ -15,8 +15,7 @@ export interface RequestConfig {
   retries?: number;
   params?: Record<string, string>;
   cancelKey?: string | null;
-  next?: NextFetchRequestConfig;
-}
+} & Pick<RequestInit, 'cache' | 'next'>;
 
 export interface ApiResponse<T = unknown> {
   data: T;
