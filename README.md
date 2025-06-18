@@ -1,1 +1,1 @@
-# nextjs-fetch-service-example
+# Next js fetch service example
